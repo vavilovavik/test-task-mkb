@@ -6,7 +6,7 @@ import com.mcb.creditfactory.dto.Collateral;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class CollateralGetInfoVisitor implements Visitor {
+public class GetInfoCollateralVisitor implements Visitor {
     private CollateralService collateralService;
 
     public Collateral visit(CarDto carDto) {

@@ -20,7 +20,7 @@ public class CollateralService {
 
     private SaveCollateralVisitor saveVisitor = new SaveCollateralVisitor(this);
 
-    private CollateralGetInfoVisitor getInfoVisitor = new CollateralGetInfoVisitor(this);
+    private GetInfoCollateralVisitor getInfoVisitor = new GetInfoCollateralVisitor(this);
 
     public Long saveCollateral(Collateral collateral) {
         return collateral.acceptSave(saveVisitor);

@@ -2,7 +2,7 @@ package com.mcb.creditfactory.dto;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.mcb.creditfactory.service.CollateralGetInfoVisitor;
+import com.mcb.creditfactory.service.GetInfoCollateralVisitor;
 import com.mcb.creditfactory.service.SaveCollateralVisitor;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
@@ -13,5 +13,5 @@ import com.mcb.creditfactory.service.SaveCollateralVisitor;
 public interface Collateral {
     Long acceptSave(SaveCollateralVisitor visitor);
 
-    Collateral acceptGetInfo(CollateralGetInfoVisitor visitor);
+    Collateral acceptGetInfo(GetInfoCollateralVisitor visitor);
 }

@@ -1,7 +1,7 @@
 package com.mcb.creditfactory.dto;
 
 import com.fasterxml.jackson.annotation.JsonTypeName;
-import com.mcb.creditfactory.service.CollateralGetInfoVisitor;
+import com.mcb.creditfactory.service.GetInfoCollateralVisitor;
 import com.mcb.creditfactory.service.SaveCollateralVisitor;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,7 +24,7 @@ public class AirplaneDto implements Collateral {
     }
 
     @Override
-    public Collateral acceptGetInfo(CollateralGetInfoVisitor visitor) {
+    public Collateral acceptGetInfo(GetInfoCollateralVisitor visitor) {
         return visitor.visit(this);
     }
 
