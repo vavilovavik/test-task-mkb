@@ -15,9 +15,8 @@ public class CostService {
     private CostRepository costRepository;
 
     public Long save(Cost cost) {
-        return Optional.of(cost)
-                .map(costRepository::save)
-                .map(this::getId)
+        return Optional.of(costRepository.save(cost))
+                .map(Cost::getId)
                 .orElse(null);
     }
 
